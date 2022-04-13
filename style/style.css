@@ -14,7 +14,7 @@ main{
     grid-template-columns: 200px auto 150px;
     grid-template-rows: auto auto auto auto;
     grid-template-areas:
-    "logoHeader none redesHeader"
+    "logoHeader logoHeader redesHeader"
     "menuHeader menuHeader menuHeader"
     "principal principal principal"
     "pie pie pie";
@@ -23,8 +23,10 @@ main{
 .logoHeader{
     background-color: white;
     grid-area: logoHeader;
-    justify-content: center;
+    justify-content: flex-start;
     display: flex;
+    margin-left: 20px;
+    margin-top: 10px;
 }
 .redesHeader{
     background-color: white;
