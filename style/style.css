@@ -1,0 +1,459 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width:100%;
+}
+main{
+    background-image: url("../media/imagenes/background.png");
+}
+.container{
+    display: grid;
+    grid-template-columns: 200px auto 150px;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+    "logoHeader none redesHeader"
+    "menuHeader menuHeader menuHeader"
+    "principal principal principal"
+    "pie pie pie";
+}
+/*Códigos de Header*/
+.logoHeader{
+    background-color: white;
+    grid-area: logoHeader;
+    justify-content: center;
+    display: flex;
+}
+.redesHeader{
+    background-color: white;
+    grid-area: redesHeader;
+    justify-content: space-between;
+    margin-top: 15px;
+    margin-right: 15px;
+}
+.redesHeader a{
+    font-size: 30px;
+    color:#042839;
+}
+.menuHeader{
+    background-color: white;
+    grid-area: menuHeader;
+}
+.menuHeader ul{
+    list-style: none;
+    background-color: white;
+    font-weight: bold;
+    height: 50px;
+    font-size: 1rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: 'Quicksand', sans-serif;
+    margin-bottom: 10px;
+    position: relative
+}
+.menuHeader li a{
+    color: #042839;
+    font-weight: normal;
+    text-decoration: none;
+    padding: 1rem;
+}
+.menuHeader li a:hover{
+    background-color: #d2ca89;
+    color: #042839;
+}
+/*Códigos de Main*/
+.principal{
+    grid-area: principal;
+    width: 100%;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+    "titulo none"
+    "texto foto";
+    column-gap: 5px;
+    row-gap: 5px;
+}
+.titulo{
+    grid-area: titulo;
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
+.texto{
+    grid-area: texto;
+    text-align: justify;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-right: 20px;
+    max-width: 100%;
+    max-height: 100%;
+}
+img{
+    max-width: 100%;
+    max-height: 100%;
+}
+.foto{
+    grid-area: foto;
+    padding-bottom: 5px;
+    justify-content: center;
+    min-width: 200px;
+}
+.foto home{
+    height: 200px;
+    width: 200px;
+}
+.foto servicios{
+    height: 200px;
+    width: 200px;
+}
+h1{
+    color: #042839;
+    font-family: 'Hepta Slab', serif;
+    font-size: 2rem;
+}
+p{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18   px;
+    max-width: 100%;
+    max-height: 100%;
+}
+/*Códigos de Footer*/
+.pie{
+    grid-area: pie;
+    background-color: #776885;
+    height: 60px;
+    width: 100%;
+    position: sticky;
+    bottom: 0;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "logoFooter menuFooter redesFooter";
+}
+.logoFooter{
+    grid-area: logoFooter;
+    justify-content: center;
+    margin-left: 10px;
+    margin-top: 2px;
+    min-width: 50px;
+}
+.menuFooter{
+    grid-area: menuFooter;
+    background-color: #776885;
+    justify-content: space-between;
+    align-self: center;
+}
+.menuFooter ul{
+    list-style: none;
+    background-color: #776885;
+    font-weight: bold;
+    height: 50px;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    font-family: 'Quicksand', sans-serif;  
+}
+.menuFooter li a{
+    color: #d2ca89;
+    font-weight: normal;
+    text-decoration: none;
+    padding: 10px;
+}
+.menuFooter li a:hover{
+    background-color:#042839;
+    color:#d2ca89;
+}
+.redesFooter{
+    grid-area: redesFooter;
+    background-color: #776885;
+    justify-content: end;
+    align-self: center;
+}
+.redesFooter ul{
+    list-style: none;
+    background-color: #776885;
+    font-weight: bold;
+    height: 50px;
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
+    align-content: center;
+    font-family: 'Quicksand', sans-serif;  
+    margin-right: 20px; 
+}
+.redesFooter li a{
+    color:#042839;
+    font-weight: normal;
+    text-decoration: none;
+    padding: 2px;
+}
+.iframe biografia{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+}
+/*Códigos de Formulario en Contactos*/
+form{
+    background-image: url("../media/imagenes/background.png");
+    width: 100%;
+    padding: 10px;
+    font-family: 'Quicksand', sans-serif;
+}
+legend{
+    font-family: 'Hepta Slab', serif;
+    font-size: 32px;
+    padding-left: 5px;
+    font-weight: bold;
+    color: #042839;
+    padding-bottom: 20px;
+}
+.formConsulta{
+    padding: 10px;
+    margin: 10px;
+}
+.Consulta{
+    margin: 5px;
+    padding: 5px;
+}
+.Enviar{
+    font-family: 'Hepta Slab', serif;
+    background-color: transparent;
+    color:#042839;
+    font-weight: bold;
+    padding: 2px;
+}
+
+@media screen and (max-width: 480px) {
+    .container{
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 30px auto auto auto auto;
+        grid-template-areas:
+        "redesHeader"
+        "logoHeader"
+        "menuHeader"
+        "principal"
+        "pie";
+    }
+    .logoHeader{
+        background-color: white;
+        grid-area: logoHeader;
+        justify-items: center;
+        align-items: center;
+        justify-self: center;
+
+    }
+    .menuHeader{
+        background-color: white;
+        grid-area: menuHeader;
+        font-size: 10px;
+    }
+    .menuHeader ul{
+        list-style: none;
+        background-color: white;
+        font-weight: bold;
+        font-size: 1rem;
+        height: 20px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        font-family: 'Quicksand', sans-serif;
+        margin-bottom: 10px;
+        position: relative
+    }
+    .menuHeader li a{
+        color: #042839;
+        font-weight: normal;
+        text-decoration: none;
+        padding: 0.5rem;
+    }
+    .redesHeader{
+        background-color: white;
+        grid-area: redesHeader;
+        justify-content: space-between;
+        display: flex;
+        flex-direction: column;
+        justify-self: flex-end;
+    }
+    .redesHeader a{
+        font-size: 1.5rem;
+        color:#042839;
+    }
+    /*Códigos de Main*/
+    .principal{
+        grid-area: principal;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+        "titulo"
+        "texto"
+        "foto";
+    }
+    .titulo{
+        grid-area: titulo;
+        text-align: center;
+        font-size: 2rem;
+        padding-bottom: 10px;
+    }
+    .texto{
+        grid-area: texto;
+        text-align: justify;
+        margin: 5px;
+        max-width: 100%;
+        max-height: 100%;
+        padding-bottom: 10px;
+    }
+    img{
+        max-width: 100%;
+        max-height: 100%;
+    }
+    .foto{
+        grid-area: foto;
+        padding-bottom: 10px;
+        justify-content: center;
+        max-width: 100%;
+        max-height: 100%;
+    }
+    .foto home{
+        max-width: fit-content;
+    }
+    .foto servicios{
+        max-width: 480px;
+    }
+    .foto talleres{
+        max-width: fit-content;
+    }
+    h1{
+        color: #042839;
+        font-family: 'Hepta Slab', serif;
+        font-size: 1.5rem;
+    }
+    p{
+        font-family: 'Quicksand', sans-serif;
+        font-size: 1rem;
+        max-width: 100%;
+        max-height: 100%;
+    }
+    .pie{
+        grid-area: pie;
+        background-color: #776885;
+        height: 50px;
+        width: 100%;
+        bottom: 0;
+        position: sticky;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto;
+        grid-template-areas:
+        "logoFooter menuFooter redesFooter";
+    }
+    .logoFooter{
+        grid-area: logoFooter;
+        display: flex;
+        justify-content: center;
+        margin-top: 5px;
+        margin-left: 10px;
+        margin-right: 10px;
+        min-width: 30px;
+        width: 1rem;
+        align-items: center;
+    }
+    .menuFooter{
+        grid-area: menuFooter;
+        background-color: #776885;
+        justify-content: space-between;
+        align-items: center;
+        height: 50px;
+        font-size: 0.7rem;
+    }
+    .menuFooter ul{
+        list-style: none;
+        background-color: #776885;
+        font-weight: bold;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        align-content: center;
+        font-family: 'Quicksand', sans-serif;   
+    }
+    .menuFooter li a{
+        color: #d2ca89;
+        font-weight: normal;
+        text-decoration: none;
+        }
+    .menuFooter li a:hover{
+        background-color:#042839;
+        color:#d2ca89;
+    }
+    .redesFooter{
+        grid-area: redesFooter;
+        background-color: #776885;
+        justify-content: end;
+        align-self: center;
+    }
+    .redesFooter ul{
+        list-style: none;
+        background-color: #776885;
+        font-weight: bold;
+        display: flex;
+        justify-content:flex-end;
+        align-items: center;
+        align-content: center;
+        font-family: 'Quicksand', sans-serif;  
+        margin-right: 20px; 
+    }
+    .redesFooter li a{
+        color:#042839;
+        font-weight: normal;
+        text-decoration: none;
+        font-size: 0.8rem
+    }
+    iframe {
+        width: 350px;
+        resize: both;
+        overflow: auto;
+        justify-self: center;
+
+    }
+    /*Códigos de Formulario en Contactos*/
+    form{
+        background-image: url("../media/imagenes/background.png");
+        padding: 10px;
+        font-family: 'Quicksand', sans-serif;
+        font-size: 0.8rem;
+    }
+    legend{
+        font-family: 'Hepta Slab', serif;
+        font-size: 1rem;
+        margin-top: 5px;
+        padding-left: 5px;
+        font-weight: bold;
+        color: #042839;
+        padding-bottom: 20px;
+    }
+    .formConsulta{
+        padding: 10px;
+        margin: 10px;
+    }
+    .Enviar{
+        font-family: 'Hepta Slab', serif;
+        background-color: transparent;
+        color:#042839;
+        font-weight: bold;
+        padding: 2px;
+    }
+}
